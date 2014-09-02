@@ -1,0 +1,32 @@
+﻿{
+  "extension_description": {
+    "message": "Check op welke versie van WordPress deze webpagina draait.",
+    "description": "Description of extension."
+  },
+    "wordpress_version_unknown_tooltip": {
+    "message": "Klik om te ontdekken welke versie van WordPress in gebruik is.",
+    "description": "Text on tooltip when WordPress version unknown."
+  },
+  "wordpress_version_known_tooltip": {
+    "message": "WordPress versie: $VERSION$",
+    "description": "",
+	"placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.5"
+      }
+	}  
+  },
+    "wordpress_version": {
+    "message": "WordPress versie: ",
+    "description": ""
+  },
+    "hidden": {
+    "message": "Verborgen",
+    "description": ""
+  },
+    "outdated": {
+    "message": " (Verouderd)",
+    "description": ""
+  }
+}

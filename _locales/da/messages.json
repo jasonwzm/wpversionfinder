@@ -1,0 +1,32 @@
+﻿{
+  "extension_description": {
+    "message": "Kontroller, hvilken version af WordPress en webside drives af.",
+    "description": "Description of extension."
+  },
+    "wordpress_version_unknown_tooltip": {
+    "message": "Klik for at finde ud af, hvilken version af WordPress, der anvendes.",
+    "description": "Text on tooltip when WordPress version unknown."
+  },
+  "wordpress_version_known_tooltip": {
+    "message": "WordPress Version: $VERSION$",
+    "description": "",
+	"placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.5"
+      }
+	}  
+  },
+    "wordpress_version": {
+    "message": "WordPress Version: ",
+    "description": ""
+  },
+    "hidden": {
+    "message": "Skjult",
+    "description": ""
+  },
+    "outdated": {
+    "message": " (Forældet)",
+    "description": ""
+  }
+}
