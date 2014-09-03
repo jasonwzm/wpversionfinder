@@ -15,7 +15,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 //Current WordPress Version
-var wordpress_version = "3.9.1";
+var wordpress_version = "3.9.2"
 
 function onMessage(request, sender, sendResponse) {
 
