@@ -16,7 +16,7 @@ def walkthru(path, writer):
 	print ("Processing: "+path+"/"+d)
 	for rootdirs, directories, filenames in os.walk(path+"/"+d):
 	  for file in filenames:
-	  	if "version.php" in file:
+	  	if "version.php" in file and file.endswith("version.php"):
 		  print("Version file found in "+path+"/"+d)
 		  FileList.append(os.path.join(root, os.path.join(d, file)))
 		  parser(FileList, writer)
