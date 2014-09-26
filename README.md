@@ -1,4 +1,4 @@
-wpversionfinder
+WordPress Version Finder
 ===============
 
 
@@ -20,7 +20,7 @@ The application is used to find out the versions of the wordpress that different
 
 Version-specific notes
 
-Version 0.1 (Tested in May 2014)
+Version 0.0.1 & 0.0.2 (Tested in May 2014)
     The first version of the application (written in Python) provides a prototype of the functions of the application. It uses the idea to find the wp-config file in the public/html or public/vhost directories. The application offers a more generic option--search in a specified path for a specified file. Users are required to type in the command to run the script and two options are required (-p for PATH and -f for FILENAME). In addition, the application generates a .csv file that contains the version of wordpress and send the file to the hardcoded email address. 
 
 Here is how the usage is defined:    
@@ -49,7 +49,7 @@ Here is how the usage is defined:
     The follow message will be shown on screen if the email is correctly sent
     email sent
 
-Version 0.2 (Modified by Ashlee from Version 0.1)
+Version 0.0.3 (Modified by Ashlee from Version 0.1)
     The version removes the function that sends an email after the search is completed.
     The program looks for version.php file in the directory.
     It will return all the version numbers found.
@@ -59,5 +59,5 @@ Give feedback to the current user on the process of the program
 Improve the performance of the application by restricting the look up to only wp-includes folder
 Improve user feedback by continuously output, instead of outputting at the end.
 
-Version 1.0 
+Version 0.1.1
     The idea behind this version is to focus on the version lookup, checking and validation of the wordpress pages. Techniques include searching for folder and parsing the html page of the blog.
