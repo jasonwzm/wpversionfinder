@@ -11,20 +11,23 @@ import stat
 
 
 def walkthru(path, writer):
-    for d in os.listdir(path):
-        if isdir(join(path,d)):
-            if 'wp-includes' in d:
-                FileList = []
-                for file in os.listdir(path + '/' + d):
-                    print(join(path,file));
-                    # print ("Processing: " + path + '/' + d)
-                    if isfile(os.path.join(path, os.path.join(d, file))):
-                        if "version.php" in file and file.endswith("version.php"):
-                            print("Version file found in " + path + '/' + d)
-                            FileList.append(os.path.join(path, os.path.join(d, file)))
-                parser(FileList, writer)
-            else:
-                walkthru(path + '/' + d, writer)
+    try:
+        for d in os.listdir(path):
+            if isdir(join(path,d)):
+                if 'wp-includes' in d:
+                    FileList = []
+                    print ("Processing: " + join(path,d))
+                    for file in os.listdir(path + '/' + d):
+                        if isfile(os.path.join(path, os.path.join(d, file))):
+                            if "version.php" in file and file.endswith("version.php"):
+                                print("Version file found in " + path + '/' + d)
+                                FileList.append(os.path.join(path, os.path.join(d, file)))
+                    parser(FileList, writer)
+                else:
+                    walkthru(path + '/' + d, writer)
+    except OSError as error:
+        print (error)
+        pass
 
 
 def parser(FileList, writer):
