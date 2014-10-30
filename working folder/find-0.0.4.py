@@ -8,6 +8,7 @@ import re
 import csv
 import time
 import stat
+import xml.etree.ElementTree as ET
 
 
 def walkthru(path, writer):
@@ -64,6 +65,14 @@ def main():
     writer = csv.writer(ofile, delimiter=' ')
     # writer.writerow(['Crawling results of %s' %options.rootdir])
     writer.writerow(['Path to wp instance', 'Version'])
+    
+    # Open the html output file
+    tree = ET.parse('output.html')
+    body = tree.getroot()
+    child = Element("NewNode")
+    body.append(child)
+    tree.write('output.html')
+    
 
     print ("Start to scan the files and subdirectories")
     walkthru(options.rootdir, writer)
